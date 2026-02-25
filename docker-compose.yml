@@ -37,7 +37,7 @@ services:
 
   backend:
     build:
-      context: ./EmailNotification    # ← FIXED: points to Spring Boot folder
+      context: backend    # ← FIXED: points to Spring Boot folder
       dockerfile: Dockerfile
     container_name: emailnotify-backend
     restart: unless-stopped
@@ -65,7 +65,7 @@ services:
 
   frontend:
     build:
-      context: ./email-frontend       # ← FIXED: points to React folder
+      context: frontend       # ← FIXED: points to React folder
       dockerfile: Dockerfile
     container_name: emailnotify-frontend
     restart: unless-stopped
